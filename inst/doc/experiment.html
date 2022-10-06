@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="Richèl J.C. Bilderbeek" />
+
+<meta name="date" content="2022-10-06" />
+
+<title>Experiment</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Experiment</h1>
+<h4 class="author">Richèl J.C. Bilderbeek</h4>
+<h4 class="date">2022-10-06</h4>
+
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>This vignette shows how to use <code>pirouette</code> in a scientific experiment.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(pirouette)</span></code></pre></div>
+<p>Remember the main question <code>pirouette</code> helps to answer:</p>
+<blockquote>
+<p>Would we know the true phylogeny in nature, how well would we be able to infer it from a DNA alignment?</p>
+</blockquote>
+<p>In this vignette, we investigate the effect of extintion rate in inferring a phylogeny from a (constant rate) birth-death process. We expect that inference is better if there is more information to work on. For example, when there are more taxa. But extinctions do not only decrease the number of taxa, also the information when these extinct taxa cam into exinstence is lost. As extinctions lower the amount of information, we predict a higher inference error for higher extinction rates.</p>
+<p>Our experimental setup will not be the best setup. A good experimental setup will have, among others, more replicates, longer MCMC runs and a more equal comparison.</p>
+</div>
+<div id="setup" class="section level2">
+<h2>Setup</h2>
+<p>We specify the extinction rates we will investigate:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>ext_rates &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.0</span>, <span class="fl">0.4</span>, <span class="dt">length.out =</span> <span class="dv">3</span>)</span></code></pre></div>
+<p>For a speciation rate, we use one value:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>spec_rate &lt;-<span class="st"> </span><span class="fl">1.0</span></span></code></pre></div>
+<p>Now, per extinction rate, we simulate one phylogeny:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>crown_age &lt;-<span class="st"> </span><span class="fl">4.0</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>n_taxa &lt;-<span class="st"> </span><span class="dv">6</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>phylogenies &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="kw">seq_along</span>(ext_rates)) {</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>  ext_rate &lt;-<span class="st"> </span>ext_rates[i]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>  phylogeny &lt;-<span class="st"> </span><span class="kw">create_exemplary_dd_tree</span>(</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>    <span class="dt">n_taxa =</span> n_taxa,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>    <span class="dt">crown_age =</span> crown_age,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>    <span class="dt">extinction_rate =</span> ext_rate</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>  )</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>  phylogenies[[i]] &lt;-<span class="st"> </span>phylogeny</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>}</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>ape<span class="op">::</span><span class="kw">plot.phylo</span>(phylogenies[[<span class="dv">1</span>]])</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>ape<span class="op">::</span><span class="kw">plot.phylo</span>(phylogenies[[<span class="dv">2</span>]])</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>ape<span class="op">::</span><span class="kw">plot.phylo</span>(phylogenies[[<span class="dv">3</span>]])</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Now, per phylogeny, we estimate the error BEAST2 makes:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>alignment_params &lt;-<span class="st"> </span><span class="kw">create_alignment_params</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>  <span class="dt">root_sequence =</span> <span class="kw">create_blocked_dna</span>(<span class="dt">length =</span> <span class="dv">20</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>experiment &lt;-<span class="st"> </span><span class="kw">create_experiment</span>(</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>  <span class="dt">inference_conditions =</span> <span class="kw">create_inference_conditions</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>    <span class="dt">model_type =</span> <span class="st">&quot;generative&quot;</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    <span class="dt">run_if =</span> <span class="st">&quot;always&quot;</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>    <span class="dt">do_measure_evidence =</span> <span class="ot">FALSE</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>  ),</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>  <span class="dt">inference_model =</span> <span class="kw">create_inference_model</span>(</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>    <span class="dt">tree_prior =</span> <span class="kw">create_bd_tree_prior</span>(),</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>    <span class="dt">mcmc =</span> <span class="kw">create_test_mcmc</span>()</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a>  )</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a>experiments &lt;-<span class="st"> </span><span class="kw">list</span>(experiment)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true"></a>pir_params &lt;-<span class="st"> </span><span class="kw">create_pir_params</span>(</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true"></a>  <span class="dt">alignment_params =</span> alignment_params,</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true"></a>  <span class="dt">experiments =</span> experiments</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true"></a>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span><span class="st"> </span>beastier<span class="op">::</span><span class="kw">is_beast2_installed</span>()) {</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="kw">seq_along</span>(ext_rates)) {</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true"></a>    phylogeny &lt;-<span class="st"> </span>phylogenies[[i]]</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true"></a>    df &lt;-<span class="st"> </span>pirouette<span class="op">::</span><span class="kw">pir_run</span>(</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true"></a>      <span class="dt">phylogeny =</span> phylogeny,</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true"></a>      <span class="dt">pir_params =</span> pir_params</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true"></a>    )</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true"></a>    errors[[i]] &lt;-<span class="st"> </span>df</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true"></a>  }</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Now, we put all data in one data frame:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span><span class="st"> </span>beastier<span class="op">::</span><span class="kw">is_beast2_installed</span>()) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>  first_error_col &lt;-<span class="st"> </span><span class="kw">which</span>(<span class="kw">colnames</span>(errors[[<span class="dv">1</span>]]) <span class="op">==</span><span class="st"> &quot;error_1&quot;</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>  last_error_col &lt;-<span class="st"> </span><span class="kw">ncol</span>(errors[[<span class="dv">1</span>]])</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>  n_errors &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">+</span><span class="st"> </span>last_error_col <span class="op">-</span><span class="st"> </span>first_error_col</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>  df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    <span class="dt">ext_rate =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(ext_rates, <span class="dt">each =</span> n_errors)),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    <span class="dt">idx =</span> <span class="kw">seq</span>(<span class="dv">1</span>, n_errors),</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>    <span class="dt">error =</span> <span class="ot">NA</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>  )</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="kw">seq_along</span>(ext_rates)) {</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>    this_df &lt;-<span class="st"> </span>errors[[i]]</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>    nltts &lt;-<span class="st"> </span>this_df[<span class="dv">1</span>, first_error_col<span class="op">:</span>last_error_col]</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>    to_row_index &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">+</span><span class="st"> </span>(i <span class="op">*</span><span class="st"> </span>n_errors) <span class="op">-</span><span class="st"> </span>n_errors</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a>    df<span class="op">$</span>error[to_row_index<span class="op">:</span>(to_row_index <span class="op">+</span><span class="st"> </span>n_errors <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)] &lt;-<span class="st"> </span><span class="kw">t</span>(<span class="kw">as.numeric</span>(nltts))</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true"></a>  }</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Plotting it:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span><span class="st"> </span>beastier<span class="op">::</span><span class="kw">is_beast2_installed</span>()) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>  ggplot2<span class="op">::</span><span class="kw">ggplot</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    df, ggplot2<span class="op">::</span><span class="kw">aes</span>(<span class="dt">x =</span> ext_rate, <span class="dt">y =</span> error)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>  ) <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">geom_boxplot</span>()</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>  ggplot2<span class="op">::</span><span class="kw">ggplot</span>(</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>    df, ggplot2<span class="op">::</span><span class="kw">aes</span>(<span class="dt">x =</span> ext_rate, <span class="dt">y =</span> error)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>  ) <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">geom_violin</span>()</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>}</span></code></pre></div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
