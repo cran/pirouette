@@ -1,7 +1,7 @@
 Package: pirouette
 Type: Package
 Title: Create a Bayesian Posterior from a Phylogeny
-Version: 1.6.4
+Version: 1.6.5
 Authors@R: c(
   person("Richèl J.C.", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")),
   person("Giovanni", "Laudanno", email = "glaudanno@gmail.com",   role = "aut"),
@@ -25,16 +25,16 @@ BugReports: https://github.com/richelbilderbeek/pirouette/issues
 Depends: babette (>= 2.1.1)
 Imports: ape, beautier (>= 2.6.2), beastier (>= 2.4.6), DDD, forcats,
         magrittr, mauricer (>= 2.5), mcbette (>= 1.7), nodeSub,
-        phangorn, phytools, plyr, pryr, rappdirs, readr, stringr, TESS,
-        tibble, tidyr, tracerer (>= 2.0.2), xtable
+        phangorn, phytools, plyr, pryr, readr, stringr, TESS, tibble,
+        tidyr, tracerer (>= 2.0.2), xtable
 Suggests: devtools, dplyr, ggplot2, knitr, lintr, markdown, nLTT (>=
-        1.4.3), rmarkdown, Rmpfr, testthat (>= 2.1.0)
+        1.4.3), rappdirs, rmarkdown, Rmpfr, testthat (>= 2.1.0)
 SystemRequirements: BEAST2 (https://www.beast2.org/)
 NeedsCompilation: no
-Packaged: 2022-10-06 06:49:19 UTC; richel
+Packaged: 2022-10-17 08:21:29 UTC; richel
 Author: Richèl J.C. Bilderbeek [aut, cre]
     (<https://orcid.org/0000-0003-1107-7049>),
   Giovanni Laudanno [aut],
   Thijs Janzen [ctb]
 Repository: CRAN
-Date/Publication: 2022-10-06 16:30:09 UTC
+Date/Publication: 2022-10-18 07:20:02 UTC
