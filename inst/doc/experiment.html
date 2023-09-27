@@ -12,7 +12,7 @@
 
 <meta name="author" content="Richèl J.C. Bilderbeek" />
 
-<meta name="date" content="2023-01-19" />
+<meta name="date" content="2023-09-27" />
 
 <title>Experiment</title>
 
@@ -29,46 +29,31 @@ document.addEventListener('DOMContentLoaded', function(e) {
   }
 });
 </script>
-<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
-// v0.0.1
-// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
-
-document.addEventListener('DOMContentLoaded', function() {
-  const codeList = document.getElementsByClassName("sourceCode");
-  for (var i = 0; i < codeList.length; i++) {
-    var linkList = codeList[i].getElementsByTagName('a');
-    for (var j = 0; j < linkList.length; j++) {
-      if (linkList[j].innerHTML === "") {
-        linkList[j].setAttribute('aria-hidden', 'true');
-      }
-    }
-  }
-});
-</script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -80,55 +65,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -356,105 +340,118 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Experiment</h1>
 <h4 class="author">Richèl J.C. Bilderbeek</h4>
-<h4 class="date">2023-01-19</h4>
+<h4 class="date">2023-09-27</h4>
 
 
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>This vignette shows how to use <code>pirouette</code> in a scientific experiment.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(pirouette)</span></code></pre></div>
-<p>Remember the main question <code>pirouette</code> helps to answer:</p>
+<p>This vignette shows how to use <code>pirouette</code> in a scientific
+experiment.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(pirouette)</span></code></pre></div>
+<p>Remember the main question <code>pirouette</code> helps to
+answer:</p>
 <blockquote>
-<p>Would we know the true phylogeny in nature, how well would we be able to infer it from a DNA alignment?</p>
+<p>Would we know the true phylogeny in nature, how well would we be able
+to infer it from a DNA alignment?</p>
 </blockquote>
-<p>In this vignette, we investigate the effect of extintion rate in inferring a phylogeny from a (constant rate) birth-death process. We expect that inference is better if there is more information to work on. For example, when there are more taxa. But extinctions do not only decrease the number of taxa, also the information when these extinct taxa cam into exinstence is lost. As extinctions lower the amount of information, we predict a higher inference error for higher extinction rates.</p>
-<p>Our experimental setup will not be the best setup. A good experimental setup will have, among others, more replicates, longer MCMC runs and a more equal comparison.</p>
+<p>In this vignette, we investigate the effect of extintion rate in
+inferring a phylogeny from a (constant rate) birth-death process. We
+expect that inference is better if there is more information to work on.
+For example, when there are more taxa. But extinctions do not only
+decrease the number of taxa, also the information when these extinct
+taxa cam into exinstence is lost. As extinctions lower the amount of
+information, we predict a higher inference error for higher extinction
+rates.</p>
+<p>Our experimental setup will not be the best setup. A good
+experimental setup will have, among others, more replicates, longer MCMC
+runs and a more equal comparison.</p>
 </div>
 <div id="setup" class="section level2">
 <h2>Setup</h2>
 <p>We specify the extinction rates we will investigate:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>ext_rates &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.0</span>, <span class="fl">0.4</span>, <span class="dt">length.out =</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>ext_rates <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.0</span>, <span class="fl">0.4</span>, <span class="at">length.out =</span> <span class="dv">3</span>)</span></code></pre></div>
 <p>For a speciation rate, we use one value:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>spec_rate &lt;-<span class="st"> </span><span class="fl">1.0</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>spec_rate <span class="ot">&lt;-</span> <span class="fl">1.0</span></span></code></pre></div>
 <p>Now, per extinction rate, we simulate one phylogeny:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>crown_age &lt;-<span class="st"> </span><span class="fl">4.0</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>n_taxa &lt;-<span class="st"> </span><span class="dv">6</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>phylogenies &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="kw">seq_along</span>(ext_rates)) {</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>  ext_rate &lt;-<span class="st"> </span>ext_rates[i]</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>  phylogeny &lt;-<span class="st"> </span><span class="kw">create_exemplary_dd_tree</span>(</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>    <span class="dt">n_taxa =</span> n_taxa,</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>    <span class="dt">crown_age =</span> crown_age,</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>    <span class="dt">extinction_rate =</span> ext_rate</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>  )</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>  phylogenies[[i]] &lt;-<span class="st"> </span>phylogeny</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>}</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>ape<span class="op">::</span><span class="kw">plot.phylo</span>(phylogenies[[<span class="dv">1</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>crown_age <span class="ot">&lt;-</span> <span class="fl">4.0</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>n_taxa <span class="ot">&lt;-</span> <span class="dv">6</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>phylogenies <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(ext_rates)) {</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  ext_rate <span class="ot">&lt;-</span> ext_rates[i]</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  phylogeny <span class="ot">&lt;-</span> <span class="fu">create_exemplary_dd_tree</span>(</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>    <span class="at">n_taxa =</span> n_taxa,</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>    <span class="at">crown_age =</span> crown_age,</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>    <span class="at">extinction_rate =</span> ext_rate</span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>  )</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>  phylogenies[[i]] <span class="ot">&lt;-</span> phylogeny</span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>}</span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>ape<span class="sc">::</span><span class="fu">plot.phylo</span>(phylogenies[[<span class="dv">1</span>]])</span></code></pre></div>
 <p><img src="data:image/png;base64,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" /><!-- --></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>ape<span class="op">::</span><span class="kw">plot.phylo</span>(phylogenies[[<span class="dv">2</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>ape<span class="sc">::</span><span class="fu">plot.phylo</span>(phylogenies[[<span class="dv">2</span>]])</span></code></pre></div>
 <p><img src="data:image/png;base64,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" /><!-- --></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>ape<span class="op">::</span><span class="kw">plot.phylo</span>(phylogenies[[<span class="dv">3</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>ape<span class="sc">::</span><span class="fu">plot.phylo</span>(phylogenies[[<span class="dv">3</span>]])</span></code></pre></div>
 <p><img src="data:image/png;base64,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" /><!-- --></p>
 <p>Now, per phylogeny, we estimate the error BEAST2 makes:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>alignment_params &lt;-<span class="st"> </span><span class="kw">create_alignment_params</span>(</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>  <span class="dt">root_sequence =</span> <span class="kw">create_blocked_dna</span>(<span class="dt">length =</span> <span class="dv">20</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>experiment &lt;-<span class="st"> </span><span class="kw">create_experiment</span>(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>  <span class="dt">inference_conditions =</span> <span class="kw">create_inference_conditions</span>(</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>    <span class="dt">model_type =</span> <span class="st">&quot;generative&quot;</span>,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    <span class="dt">run_if =</span> <span class="st">&quot;always&quot;</span>,</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>    <span class="dt">do_measure_evidence =</span> <span class="ot">FALSE</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>  ),</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>  <span class="dt">inference_model =</span> <span class="kw">create_inference_model</span>(</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>    <span class="dt">tree_prior =</span> <span class="kw">create_bd_tree_prior</span>(),</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>    <span class="dt">mcmc =</span> <span class="kw">create_test_mcmc</span>()</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a>  )</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a>)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a>experiments &lt;-<span class="st"> </span><span class="kw">list</span>(experiment)</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true"></a>pir_params &lt;-<span class="st"> </span><span class="kw">create_pir_params</span>(</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true"></a>  <span class="dt">alignment_params =</span> alignment_params,</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true"></a>  <span class="dt">experiments =</span> experiments</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true"></a>)</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span><span class="st"> </span>beastier<span class="op">::</span><span class="kw">is_beast2_installed</span>()) {</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="kw">seq_along</span>(ext_rates)) {</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true"></a>    phylogeny &lt;-<span class="st"> </span>phylogenies[[i]]</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true"></a>    df &lt;-<span class="st"> </span>pirouette<span class="op">::</span><span class="kw">pir_run</span>(</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true"></a>      <span class="dt">phylogeny =</span> phylogeny,</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true"></a>      <span class="dt">pir_params =</span> pir_params</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true"></a>    )</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true"></a>    errors[[i]] &lt;-<span class="st"> </span>df</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true"></a>  }</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>alignment_params <span class="ot">&lt;-</span> <span class="fu">create_alignment_params</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="at">root_sequence =</span> <span class="fu">create_blocked_dna</span>(<span class="at">length =</span> <span class="dv">20</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>)</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>experiment <span class="ot">&lt;-</span> <span class="fu">create_experiment</span>(</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  <span class="at">inference_conditions =</span> <span class="fu">create_inference_conditions</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="at">model_type =</span> <span class="st">&quot;generative&quot;</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>    <span class="at">run_if =</span> <span class="st">&quot;always&quot;</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>    <span class="at">do_measure_evidence =</span> <span class="cn">FALSE</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  ),</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="at">inference_model =</span> beautier<span class="sc">::</span><span class="fu">create_inference_model</span>(</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>    <span class="at">tree_prior =</span> beautier<span class="sc">::</span><span class="fu">create_bd_tree_prior</span>(),</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>    <span class="at">mcmc =</span> beautier<span class="sc">::</span><span class="fu">create_test_mcmc</span>()</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>  )</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>)</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>experiments <span class="ot">&lt;-</span> <span class="fu">list</span>(experiment)</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a>pir_params <span class="ot">&lt;-</span> <span class="fu">create_pir_params</span>(</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a>  <span class="at">alignment_params =</span> alignment_params,</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a>  <span class="at">experiments =</span> experiments</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a>)</span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a>errors <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span> beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>()) {</span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(ext_rates)) {</span>
+<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a>    phylogeny <span class="ot">&lt;-</span> phylogenies[[i]]</span>
+<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a>    df <span class="ot">&lt;-</span> pirouette<span class="sc">::</span><span class="fu">pir_run</span>(</span>
+<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a>      <span class="at">phylogeny =</span> phylogeny,</span>
+<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a>      <span class="at">pir_params =</span> pir_params</span>
+<span id="cb7-27"><a href="#cb7-27" tabindex="-1"></a>    )</span>
+<span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a>    errors[[i]] <span class="ot">&lt;-</span> df</span>
+<span id="cb7-29"><a href="#cb7-29" tabindex="-1"></a>  }</span>
+<span id="cb7-30"><a href="#cb7-30" tabindex="-1"></a>}</span></code></pre></div>
 <p>Now, we put all data in one data frame:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span><span class="st"> </span>beastier<span class="op">::</span><span class="kw">is_beast2_installed</span>()) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>  first_error_col &lt;-<span class="st"> </span><span class="kw">which</span>(<span class="kw">colnames</span>(errors[[<span class="dv">1</span>]]) <span class="op">==</span><span class="st"> &quot;error_1&quot;</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>  last_error_col &lt;-<span class="st"> </span><span class="kw">ncol</span>(errors[[<span class="dv">1</span>]])</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>  n_errors &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">+</span><span class="st"> </span>last_error_col <span class="op">-</span><span class="st"> </span>first_error_col</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>  df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    <span class="dt">ext_rate =</span> <span class="kw">as.factor</span>(<span class="kw">rep</span>(ext_rates, <span class="dt">each =</span> n_errors)),</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    <span class="dt">idx =</span> <span class="kw">seq</span>(<span class="dv">1</span>, n_errors),</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>    <span class="dt">error =</span> <span class="ot">NA</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>  )</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="kw">seq_along</span>(ext_rates)) {</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>    this_df &lt;-<span class="st"> </span>errors[[i]]</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>    nltts &lt;-<span class="st"> </span>this_df[<span class="dv">1</span>, first_error_col<span class="op">:</span>last_error_col]</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>    to_row_index &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">+</span><span class="st"> </span>(i <span class="op">*</span><span class="st"> </span>n_errors) <span class="op">-</span><span class="st"> </span>n_errors</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a>    df<span class="op">$</span>error[to_row_index<span class="op">:</span>(to_row_index <span class="op">+</span><span class="st"> </span>n_errors <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)] &lt;-<span class="st"> </span><span class="kw">t</span>(<span class="kw">as.numeric</span>(nltts))</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true"></a>  }</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span> beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>()) {</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  first_error_col <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">colnames</span>(errors[[<span class="dv">1</span>]]) <span class="sc">==</span> <span class="st">&quot;error_1&quot;</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  last_error_col <span class="ot">&lt;-</span> <span class="fu">ncol</span>(errors[[<span class="dv">1</span>]])</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>  n_errors <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> last_error_col <span class="sc">-</span> first_error_col</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>    <span class="at">ext_rate =</span> <span class="fu">as.factor</span>(<span class="fu">rep</span>(ext_rates, <span class="at">each =</span> n_errors)),</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>    <span class="at">idx =</span> <span class="fu">seq</span>(<span class="dv">1</span>, n_errors),</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>    <span class="at">error =</span> <span class="cn">NA</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>  )</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(ext_rates)) {</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>    this_df <span class="ot">&lt;-</span> errors[[i]]</span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>    nltts <span class="ot">&lt;-</span> this_df[<span class="dv">1</span>, first_error_col<span class="sc">:</span>last_error_col]</span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a>    to_row_index <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> (i <span class="sc">*</span> n_errors) <span class="sc">-</span> n_errors</span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a>    df<span class="sc">$</span>error[to_row_index<span class="sc">:</span>(to_row_index <span class="sc">+</span> n_errors <span class="sc">-</span> <span class="dv">1</span>)] <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">as.numeric</span>(nltts))</span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a>  }</span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a>}</span></code></pre></div>
 <p>Plotting it:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span><span class="st"> </span>beastier<span class="op">::</span><span class="kw">is_beast2_installed</span>()) {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>  ggplot2<span class="op">::</span><span class="kw">ggplot</span>(</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    df, ggplot2<span class="op">::</span><span class="kw">aes</span>(<span class="dt">x =</span> ext_rate, <span class="dt">y =</span> error)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>  ) <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">geom_boxplot</span>()</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>  ggplot2<span class="op">::</span><span class="kw">ggplot</span>(</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>    df, ggplot2<span class="op">::</span><span class="kw">aes</span>(<span class="dt">x =</span> ext_rate, <span class="dt">y =</span> error)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>  ) <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">geom_violin</span>()</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span> beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>()) {</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>    df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> ext_rate, <span class="at">y =</span> error)</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>  ) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">geom_boxplot</span>()</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    df, ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> ext_rate, <span class="at">y =</span> error)</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>  ) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">geom_violin</span>()</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>}</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
 </div>
 
 

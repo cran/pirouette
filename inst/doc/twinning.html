@@ -12,7 +12,7 @@
 
 <meta name="author" content="Richèl J.C. Bilderbeek" />
 
-<meta name="date" content="2023-01-19" />
+<meta name="date" content="2023-09-27" />
 
 <title>Twinning</title>
 
@@ -29,46 +29,31 @@ document.addEventListener('DOMContentLoaded', function(e) {
   }
 });
 </script>
-<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
-// v0.0.1
-// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
-
-document.addEventListener('DOMContentLoaded', function() {
-  const codeList = document.getElementsByClassName("sourceCode");
-  for (var i = 0; i < codeList.length; i++) {
-    var linkList = codeList[i].getElementsByTagName('a');
-    for (var j = 0; j < linkList.length; j++) {
-      if (linkList[j].innerHTML === "") {
-        linkList[j].setAttribute('aria-hidden', 'true');
-      }
-    }
-  }
-});
-</script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -80,55 +65,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -356,29 +340,41 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Twinning</h1>
 <h4 class="author">Richèl J.C. Bilderbeek</h4>
-<h4 class="date">2023-01-19</h4>
+<h4 class="date">2023-09-27</h4>
 
 
 
-<p><code>pirouette</code> has the option to investigate the error BEAST2 makes on a twin tree. A twin tree is a tree with the same topology as the original phylogeny, yet where the branch lengths follow a birth-death branch length distribution.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(pirouette)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
-<p>Twinning is useful to separate the effect of an unknown tree prior (i.e. speciation model) on a phylogeny’s shape from the noise (the minimal error) made by BEAST2.</p>
+<p><code>pirouette</code> has the option to investigate the error BEAST2
+makes on a twin tree. A twin tree is a tree with the same topology as
+the original phylogeny, yet where the branch lengths follow a
+birth-death branch length distribution.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(pirouette)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<p>Twinning is useful to separate the effect of an unknown tree prior
+(i.e. speciation model) on a phylogeny’s shape from the noise (the
+minimal error) made by BEAST2.</p>
 <p>In this example, the following tree is used:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>phylogeny &lt;-<span class="st"> </span>ape<span class="op">::</span><span class="kw">read.tree</span>(<span class="dt">text =</span> <span class="st">&quot;((A:1, B:1):1, (C:1, D:1):1);&quot;</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>ape<span class="op">::</span><span class="kw">plot.phylo</span>(phylogeny, <span class="dt">main =</span> <span class="st">&quot;The True Phylogeny&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>phylogeny <span class="ot">&lt;-</span> ape<span class="sc">::</span><span class="fu">read.tree</span>(<span class="at">text =</span> <span class="st">&quot;((A:1, B:1):1, (C:1, D:1):1);&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>ape<span class="sc">::</span><span class="fu">plot.phylo</span>(phylogeny, <span class="at">main =</span> <span class="st">&quot;The True Phylogeny&quot;</span>)</span></code></pre></div>
 <p><img src="data:image/png;base64,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" /><!-- --></p>
-<p>This phylogeny follows a speciation model unknown to BEAST2, as two speciation events happened at exactly the same time. Such a phylogeny will have a likelihood of zero for all of the BEAST2 tree priors.</p>
+<p>This phylogeny follows a speciation model unknown to BEAST2, as two
+speciation events happened at exactly the same time. Such a phylogeny
+will have a likelihood of zero for all of the BEAST2 tree priors.</p>
 <p>Twinning:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>twinning_params &lt;-<span class="st"> </span>pirouette<span class="op">::</span><span class="kw">create_twinning_params</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>alignment_params &lt;-<span class="st"> </span>pirouette<span class="op">::</span><span class="kw">create_alignment_params</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>  <span class="dt">root_sequence =</span> pirouette<span class="op">::</span><span class="kw">create_blocked_dna</span>(<span class="dt">length =</span> <span class="dv">100</span>),</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>  <span class="dt">rng_seed =</span> <span class="dv">314</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>twinning_params <span class="ot">&lt;-</span> pirouette<span class="sc">::</span><span class="fu">create_twinning_params</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>alignment_params <span class="ot">&lt;-</span> pirouette<span class="sc">::</span><span class="fu">create_alignment_params</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="at">root_sequence =</span> pirouette<span class="sc">::</span><span class="fu">create_blocked_dna</span>(<span class="at">length =</span> <span class="dv">100</span>),</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  <span class="at">rng_seed =</span> <span class="dv">314</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>)</span></code></pre></div>
 <p>We select our inference models in two ways:</p>
 <ol style="list-style-type: decimal">
-<li>Using the generative model: we use the same site and clock model the alignment was created with. We do have to specify a BEAST2 tree prior that is closest to what we think generated the phylogeny</li>
-<li>(for non-Windows users only) Using the inference model that has the most evidence (also: marginal likelihood) from a set of inference models. In this example, we pick all combinations of the one correct site model, the one correct clock model and two tree priors.</li>
+<li>Using the generative model: we use the same site and clock model the
+alignment was created with. We do have to specify a BEAST2 tree prior
+that is closest to what we think generated the phylogeny</li>
+<li>(for non-Windows users only) Using the inference model that has the
+most evidence (also: marginal likelihood) from a set of inference
+models. In this example, we pick all combinations of the one correct
+site model, the one correct clock model and two tree priors.</li>
 </ol>
 <table>
 <thead>
@@ -404,65 +400,65 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>experiment_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">create_test_gen_experiment</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>  <span class="dt">inference_model =</span> <span class="kw">create_test_inference_model</span>(</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    <span class="dt">tree_prior =</span> <span class="kw">create_bd_tree_prior</span>()</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>  )</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span>) {</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>  experiment_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">create_test_cand_experiment</span>(</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>    <span class="dt">inference_model =</span> <span class="kw">create_test_inference_model</span>(</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>      <span class="dt">tree_prior =</span> <span class="kw">create_yule_tree_prior</span>()</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>    )</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>  )</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a>  experiment_<span class="dv">1</span><span class="op">$</span>inference_conditions<span class="op">$</span>do_measure_evidence &lt;-<span class="st"> </span><span class="ot">TRUE</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>  experiments &lt;-<span class="st"> </span><span class="kw">list</span>(experiment_<span class="dv">1</span>, experiment_<span class="dv">2</span>)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>  twinning_params<span class="op">$</span>twin_evidence_filename &lt;-<span class="st"> </span><span class="kw">get_temp_evidence_filename</span>()</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true"></a>  pir_params &lt;-<span class="st"> </span><span class="kw">create_pir_params</span>(</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true"></a>    <span class="dt">alignment_params =</span> alignment_params,</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true"></a>    <span class="dt">experiments =</span> experiments,</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true"></a>    <span class="dt">twinning_params =</span> twinning_params,</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true"></a>    <span class="dt">evidence_filename =</span> <span class="kw">get_temp_evidence_filename</span>()</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true"></a>  )</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true"></a>} <span class="cf">else</span> {</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true"></a>  experiments &lt;-<span class="st"> </span><span class="kw">list</span>(experiment_<span class="dv">1</span>)</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true"></a></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true"></a>  pir_params &lt;-<span class="st"> </span><span class="kw">create_pir_params</span>(</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true"></a>    <span class="dt">alignment_params =</span> alignment_params,</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true"></a>    <span class="dt">experiments =</span> experiments,</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true"></a>    <span class="dt">twinning_params =</span> twinning_params</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true"></a>  )</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>experiment_1 <span class="ot">&lt;-</span> <span class="fu">create_test_gen_experiment</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="at">inference_model =</span> beautier<span class="sc">::</span><span class="fu">create_test_inference_model</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>    <span class="at">tree_prior =</span> beautier<span class="sc">::</span><span class="fu">create_bd_tree_prior</span>()</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  )</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>)</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span>) {</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  experiment_2 <span class="ot">&lt;-</span> <span class="fu">create_test_cand_experiment</span>(</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>    <span class="at">inference_model =</span> beautier<span class="sc">::</span><span class="fu">create_test_inference_model</span>(</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>      <span class="at">tree_prior =</span> beautier<span class="sc">::</span><span class="fu">create_yule_tree_prior</span>()</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>    )</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>  )</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>  experiment_1<span class="sc">$</span>inference_conditions<span class="sc">$</span>do_measure_evidence <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>  experiments <span class="ot">&lt;-</span> <span class="fu">list</span>(experiment_1, experiment_2)</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>  twinning_params<span class="sc">$</span>twin_evidence_filename <span class="ot">&lt;-</span> <span class="fu">get_temp_evidence_filename</span>()</span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>  pir_params <span class="ot">&lt;-</span> <span class="fu">create_pir_params</span>(</span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>    <span class="at">alignment_params =</span> alignment_params,</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>    <span class="at">experiments =</span> experiments,</span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>    <span class="at">twinning_params =</span> twinning_params,</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a>    <span class="at">evidence_filename =</span> <span class="fu">get_temp_evidence_filename</span>()</span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>  )</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a>  experiments <span class="ot">&lt;-</span> <span class="fu">list</span>(experiment_1)</span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a>  pir_params <span class="ot">&lt;-</span> <span class="fu">create_pir_params</span>(</span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a>    <span class="at">alignment_params =</span> alignment_params,</span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a>    <span class="at">experiments =</span> experiments,</span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a>    <span class="at">twinning_params =</span> twinning_params</span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a>  )</span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>}</span></code></pre></div>
 <p>Run:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>df &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>) {</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>  df &lt;-<span class="st"> </span><span class="kw">pir_run</span>(</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    <span class="dt">phylogeny =</span> phylogeny,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>    <span class="dt">pir_params =</span> pir_params</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>  )</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>} <span class="cf">else</span> {</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a>  df &lt;-<span class="st"> </span><span class="kw">create_test_pir_run_output</span>()</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>) {</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">pir_run</span>(</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>    <span class="at">phylogeny =</span> phylogeny,</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>    <span class="at">pir_params =</span> pir_params</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>  )</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">create_test_pir_run_output</span>()</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>}</span></code></pre></div>
 <p>Show as a table:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>knitr<span class="op">::</span><span class="kw">kable</span>(df)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(df)</span></code></pre></div>
 <table>
 <colgroup>
-<col width="4%"></col>
-<col width="14%"></col>
-<col width="20%"></col>
-<col width="10%"></col>
-<col width="17%"></col>
-<col width="10%"></col>
-<col width="7%"></col>
-<col width="7%"></col>
-<col width="7%"></col>
+<col width="4%" />
+<col width="14%" />
+<col width="20%" />
+<col width="10%" />
+<col width="17%" />
+<col width="10%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -492,177 +488,187 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </tbody>
 </table>
 <p>Show as a figure:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>pirouette<span class="op">::</span><span class="kw">pir_plot</span>(df)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>pirouette<span class="sc">::</span><span class="fu">pir_plot</span>(df)</span></code></pre></div>
 <p><img src="data:image/png;base64,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f9VVV61cufK0004bO3bsU089VVpaak1bAACgNRoJ+HvvvXfXrl27du2aOHHiL37xi+7du1900UUvvPCC3++3pj8AANACTXoPfvDgwQsXLty2bdvtt9/++uuvX3HFFTk5Odddd90nn3zS3v0BAIAWaDzgjx07tmzZsry8vG7duj3zzDM33njjm2+++eyzzx48eHDChAmRSMSCLgGgrpEjZdo0u5toM927d9c07eOPPz55ZDQa7dWrl6Zp+/fvb/qqMjIy3nrrrXhTI5GIpmlbtmxpea9NLnrs2LGqqqq2LYSma+Re9Oedd96mTZtOOeWUGTNm/O1vfxs7dqzH44lNysrKOnjw4Jlnntn+fQLAV/XtK3372t1EW9I07S9/+cuPf/zj2JgtW7YcOXLExpZaacaMGdOmTfvhD39odyNfU42cwY8aNWrjxo2HDh168sknx48fH0t3EUlLS/vnP/95+umnt3OHAPC1cO65565aterkMQUFBeeee65d/bSTmpoau1v4umgk4Pfu3XvOOedomhYbU15ePnPmTBHRdT03N/fkyAcAtNhFF120e/fuAyfdvaegoOCSSy6J/be0tPTaa6/t3r17jx49rrnmmuPHj5vjDxw4cMEFF2RnZ48cOfKVV16JzV9RUXHzzTf36dMnKytr6tSpn3/+eYLqBw4cmDZtWk5OTmZm5nnnnbdz505zvNfrXb169ZAhQzp06HDGGWcUFBQkLhpz9tlnb9q0ad68eZMnTxYR832BSZMmXXnllQl6a1bPSKzhS/RVVVVLly4VkbVr1y5evPjkSQcPHtywYYMFnQHA10qnTp2+9a1vrVq1asGCBSKyY8eOY8eOTZo0yZwajUYnT56sadrKlStFZP78+RdeeOHWrVtramomTJgwaNCgV1555fjx47feemvsFHn69OmGYTzzzDOpqam//OUvJ02a9N5772VkZDRY/aKLLjrllFNWrlypadpPf/rTG2+8cevWreakW2+99Ze//OXAgQMffvjha665ZsqUKYZhxCsa8/77748bN+7kS/R33nnnnDlzJkyYEK+37OzseOPb+LH+emg44P1+/+rVq83h2IDJ4/E89thj7d4XAHz9zJw586mnnjIDvqCgIC8vLzU11Zz0zjvvbN++/eDBg9/4xjdE5MUXXzz99NM3btxYWFjo9/sLCgoyMzNFRNf1adOmiciWLVvefffdkpISMx3//Oc/9+zZs6Cg4Pvf/379utFo9Prrr58xY0bfvn1F5PPPP7/rrrtiU+fMmWNeuH3wwQeff/75oqKit99+u8GiiU2dOvXqq69O0NuQIUMaHH/99de35lH92mo44Lt27fruu++KyNlnn20OAICzrFsnu3bJvHl299GWpk2bdvPNNx88ePC0004rKCh4+OGHY5P27t3bt29fM91FpE+fPn369Nm7d+++fftGjx5tBq2IfPvb347NHwqFunbtGltDOBw+fPhwg3U1TZszZ84rr7zy9NNP79u3b/369bqux6aeddZZ5kDnzp3NgT179jRYNLFRo0Yl7k3X9ab3jEY1HPA7d+7s2rVrjx49/vCHP8TeiTnZ8OHD27kxAEioulrKyuxuoo117tx54sSJq1atysvL+/e//z158uRjx46Zk6LRaJ2ZPR5POBw+OYlFJCUlxRyTlZV1yimn1P8QfoPfba6qqho3blxSUtJll132/e9/f+rUqfNOOnJKSUmpM3+8oomlp6ebA/F6e/nllxscj5Zp+CNyI0aMeOKJJ8yBBlnbJAB8XcycOXPVqlUFBQUXXnhhhw4dYuMHDhz42WefxT50dujQoc8++2zw4MEDBw7cunVrZWWlOX7z5s1mhA8ePLi4uHjv3r3m+KKiojFjxnz44YcNFn377bc/+uijv/3tbz/60Y/y8vKSkhr5BnW8ok0Ur7dm9YxGNRzwtbW1jzzyiDnQIGubBICvi+nTp2/fvv13v/ud+bZ3zHnnnTdixIjLLrvsvffe27Rp0+WXXz5ixIgJEyZceeWVPp9v5syZmzdvfv3112+88UbzsKBfv37Tp0+fNm3a2rVr169ff/XVV1dVVQ0ePLjBop07dw4Ggy+99NKhQ4deeumle++9t6amJvYp/friFa3D4/F8+umn5eXldcbH661ZPaNRDQd8SkqKeQSXkpKybdu2o0ePpqSkvPHGG1deeeXixYubcikGANACXbt2HT9+/LFjx6ZMmXLyeE3T3njjjb59+15yySWXXnrpaaed9sYbb2ia1qFDh40bN4rIhRdeuGDBgkcfffS0004zF3nmmWe+9a1v3XjjjZdccknHjh1fe+21eH+9zznnnJ/97Gc/+clPRowYsXLlynXr1vXp0+fCCy+M12SCoif73ve+9/zzzzf4Ebl4vTW9ZzRKq/++zsmeeOKJu+66a82aNUOHDj3zzDMnT578zjvvzJkz5+SPflhj+fLlQ4cOjX1GoymCwWBFRUXHjh0te30EAgFp6P2qdmIYRllZWWZmZnJysjUVw+FwIBBIS0uzppyIlJaWpqamNnhy0E4qKipiHx2yQHl5ua7r8b651B7aZQNLS6VLF7n+ejn77DpTgsGgYRg+n0+Ki+WBB2TdOvnud1tV67XXJC9PHn5YPvxQ9u6VOXPqV0zevl3+9Cc5cUISbOkTT8i8efLb3yaq9de/yvbtcvRoglkee+yxa6+9tkePHs3YBMASjdymJj8//+c///mUKVNWr149ePDg1atXL126dMWKFdY0BwBxnX9+/XQHENNIwJeUlJx33nkisn79evN60eDBg48mPJ4FAAC2ayTg+/fvX1BQcODAgbVr115wwQUisn79+p49e1rSGwAAaKFGAv6hhx5avHhxv379zjrrrHPOOeeRRx6544475s6da01zAACgZRr5suPUqVMPHDjw8ccfmz85k5ub++abb06cODHBInv27FmyZElFRcW4ceNmzZpV59do5s2bV1hYaA5PmTJl9uzZjS4CAACaq5GAF5Fu3bqFQiHzZoF9+vQRkU8++STer8RGIpHFixffcccd/fr1e+CBBzZu3Gi+hR9TXFy8YsUKn88nImaQN7oIADRg9275/HO54AK7+wAcqpFz5VWrVnXs2PGMeuLNv3Pnzi5dugwbNszn802dOrXO786Zd8jJyMjwer1er9f89lriRQCgYYWFsnGj3U0AztXIGfz8+fOnTZv24IMPxn5jILGSkpLevXubw717947dRdlkfvx+7ty5paWlAwcOnDNnTseOHRMsUltbu2nTJnP42LFjoVDI/KJ5E4XDYREJBoOWXfMPhULWFDKZ9zAIhUKJb2bQhiKRSCQSadaz0Hrml+8tK2cYhsXl5Ms7KFhWsc3LacFgsohhGNF69ys1X5yRSEQMQxcJhUJG66p7QiGvSMQwPNGo1tCd1Q3DiEQiuvmoxq+lh8NJcW7M/t9a0ahEo8GEDUciEct2QKBZGgn4w4cP33ffff369Wvi6iorK2M/bpiamlpRUXHy1EAgMGjQoNmzZ2dlZeXn5y9dunTBggUJFikvLzd/NlFERowYcdZZZ8Vufdx01dXVzV2klSy+la/f77eynIgEg0GLy1lcsQUvs9YwDMPiim1eTqus7CwSCoUicbIwEAhowWCqSE1NTah11ZP9fq9IMBhMikSSotEGD1bMgK+qqopqWrz1pAYCSY0dWnnDYT0aTfxwhUIh8yitVe6+W95/P+7USEQqKiQ9XbzeuPN84xuyfHlr24BaGgn40047bd++fYMGDWri6tLT04uLi81hv98f++0gU//+/e+55x5zOC8v78R7O2QAACAASURBVP7770+8SLdu3davX28Ov/jii5mZmU28kGAKBoOVlZXZ2dkK38nuiy++yMjIsPJOdsFg0Mr7ypWVlfl8PisrVlZWWnlfuRMnTui6XmdPaVftt4EpKSlS75n6753sfD4RyczMlObsxQ3IyBCRVJ9PkpJE0+q/NoLBoNfrFZFOnTolupNdhw4i0shLy+sVjyfxnx2fz9cGf2F27pTt2yXOZ5tERDweqamJO/Xzz4XfVEU9jQT8ww8/fNttt+3fv/+ss846ObcmTJjQ4Pw5OTkbv3xX7PDhwzk5OSdPNT8/b14PSEpKMnfCBIt4PJ7YPTW9Xq+maVr84/H6zJmbu1RrxCpaXE7VDYwVtb6ileWsr9j25Zq8Qk3Tmj5zi2v994WaYOZm9WyBPn1k9uwWLvv88wQ86msk4C+77DIRMU+1Txbvzebhw4c/+eSTBw8ePPXUU9euXRs7DigsLDTfX3/66acfffTRLl26rFmzZsyYMQkWAYBEzj9fcnPtbgJwrkYCvrmfGtN1fcGCBfn5+YFAYPTo0bFvzM+fP3/RokXnnntucXHxvffeGwqFRowYccMNNyRYBAASyc6W7Gy7mwCcq/HvwZeXlxcUFBw5cuQnP/nJhx9+OHjw4MRvOA0YMCA/P7/OyJdfftkcmDFjxowZM5qyCAAAaLFGvj926NChc8899957773vvvtE5Kabbho+fPi///1vS3oDAIgUF8vNN8tHH9ndB1ymkYD/wQ9+MHLkyKKioqSkJBEpKCjo0qXLnXfeaUlvAIA2sGTJkqFDh6anp5966qk/+tGPLPjysGEY5ke43nvvvda88RpbT9sqLi72fvmdw2g0mp+fP2zYsPT09EGDBi2P/23Drl27pqSkpKam+ny+jh07Xn311X6//8SJE5qm1bmhQlFRkaZpzz77bGzM4sWLb7vttvrrLC0t1TTN5/OlpqZ26NDhnHPO+ejLIzmzUGpqalZW1re//e2Pmn+E10jAb9y48fbbb49dk+/Zs+d999339ttvN7cMALSx6mopK7O7CRf4xS9+sXTp0t///velpaUvvPDC9u3bv/e977Xh+hu8TUU0Gn311VdFZOjQob/61a9avPLYehKXa42FCxeuXLny+eef/+KLL5YuXfrjH//473//e7yZt2/f7vf7a2trCwsL33vvvd/+9rfx5kxKSrr77rvLy8ub0kN1dbV5rNC/f/9bb701Nn7//v1+v//zzz+fPn36uHHjSktLm7VpjQR8VlZWndu2BINBK78lDAANW7dOHn/c7iac7vDhwwsXLjS/tZSSkpKbm/vMM88kJSVVVVWJyN///vehQ4eeeuqp119/vXkbj507d06cOHH69Om9evWaOHHiBx98YK6n/pzbtm3Ly8u7/fbbp0yZIiKPPvponz59OnXqNHHixKNHj15yySWBQCA3N3fv3r3mmeu3vvWtFStWmGu78847f/KTnzS42jpi6zm53DvvvPOd73zHnKGgoODaa6+N1+TkyZMffPDBBI/P8ePHn3jiiVWrVg0aNMjr9Y4bN+7BBx/c2IRbIHft2nXy5Mmff/55vBmys7MvuugiczObyOv1XnXVVYcOHaozPiMjY86cOZMmTUpwPNGgRgL+wgsvfOCBB2LHIHv37r399tsvuuiiZtUAANhi69atY8aM6dmzZ2xMjx49XnjhhfT09JKSkssvv/y555775JNPDMO46667zBk2bNhw6aWXHjp0aNiwYY8//riIxJtz/fr1gwYNWrt2bWFh4aJFizZu3Hj06NGcnJw//vGPBQUFKSkpW7ZsidW9+OKLX3/9dXP41Vdfveyyy+Kt9mQnrydWrsEtbXBtjz/++KxZsxI8Pjt27Bg8eHCvXr1iY2644YaFCxc2+sDu379//fr1kyZNSjDPokWLVq1atW3btkbXZqqpqfnzn/88derUBqd+97vf3bFjRxNXZWok4P/v//5PRLp16xYOh7t37z548OChQ4eaIwEAVvD55KyzJCurBYt++umnXbp0MYc3bdqU8aU1a9a88sorEydOHDp0qK7rt95664svvmjOlp6efumll2qaNmXKlBMnTohIvDk7deo0e/ZsXdf79u372Wef9enTp7y8XNO0OjcpN1188cXr1q0zDOOjjz7SdX3YsGHxVhtPrFyDUxtc2+DBg2O/ddKgzz77rHv37onrnuzss8/OyMhIS0sbMGDAt7/97QsS/phhp06dFi1adMsttzR6M+O0tLTU1NTs7OxXXnnlpptuanCerl27HjlypOmtSqNfk8vKylq/fv2WLVv27t2blZU1ZMiQM888s1kFAACtkpUlN97YskX79u0bC86xY8ea99WfMmVKJBIpKiravHnzyJEjzamxIOzfv7/5AbRYlMab8+QLAw899FBBQUGvXr10XT/11FPrd9KnT59evXpt3bp1w4YN5ufm4q02npPLxcR+6acpa6uqqvL5fOZnxk29evWqk5pHjx7dsGHDFVdc0WAP77///uDBg0Vkx44dF1xwwaWXXhqr2KDrrrvu6aef/v3vf59ow0Sqq6t1XTcM45VXXjn77LOLi4vr30T5+PHjzToWkaZ8D15EcnNzc7ljFAC4zf/8z//s3r179+7dQ4YMMcdUVVVt3br1pptu6tat26WXXvrkk0+KSE1Nzb59+8wZ6t+aN96csR/qfP755//1r3/t2rUrOzv75z//eVmcDz+aV+nffPPNpUuXJlhtPCf/LmjsnHj//v2JmzzZ+PHj77777iuuuKK2ttaM+ZEjR+7cufPQoUOxA4IVK1a89dZb8QI+ZuTIkRMnTvzoo48SB7ymab/97W+/853vXHfddYlXaG7gtGnTunTpsn379rFjx9aZ+uabb44YMaLRlXxlhQmmFRYW3nfffVddddXEiROvvvrq+++//+OPP27W2gGgvfTrJ+PH292E0+Xk5Nx9992XXnrppk2bwuHwp59+esUVV5gn6BdeeOFf/vKXXbt2BYPBH/7wh7/5zW/iraTROY8fP961a9fMzMzjx48vX77cvAVqOByuc2n64osvfu6558rLy4cOHRpvtVu2bKnz833115ORkbFt27bjx49XV1e/8MILCZrct29fUVFRbMEBAwasXr06EAj89a9/NXs45ZRTbr311ksuuWTPnj2hUOitt9762c9+dssttzTYSR2dOnUy38JIbPjw4VdeeWXsQUuw2mg0+vrrrx85cuSMM844eXxNTc3vfve7119/3Wys6eIG/F133TVo0KAVK1ZUV1efccYZVVVVK1asGDhw4A9/+MNmFQCAdjFkiCR8BxSm++67784775w7d27Xrl2vuuqqW2655dFHH+3YsWOfPn1+/etfz5w5s1evXocPH/75z38ebw2N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BuTn59cZ+fLLLyeY2uBIAEjkjDNk7Fi7mwCci3vGAXCnG2+UFSvsbgJwLgIeAAAFEfAAACiIgAcAQEEEPAAACiLgAbjTSy/JPffY3QTgXAQ8AHfaskWee87uJgDnIuABAFAQAQ8AgIIIeAAAFETAAwCgIAIegDv99Kfy4Yd2NwE4V9v/2AwAWCE1VVJT7W4CcC7O4AEAUBABDwCAggh4AAAURMADcKeiItm1y+4mAOci4AG405NPSl6e3U0AzkXAAwCgIAIeAAAFEfAAACjITTe62bt3bzgcbvr84XC4uro6IyPD47HoOCYUComI1+u1plw0Gq2oqEhLS0tKsuh5jEQi87AcjQAAB6pJREFUoVDI5/NZU05EKioqUlJSUlJSLKtYU1PToUMHy8pVVVV5PB4rK1q8gX6/PxKJpKent/2qv/hCkpNl69Y6o2tqalJTUzVNa/uKDSkuLramENBcWjQatbuHJtm9e/e2bduatUhZWdmePXu++c1vplp1uyvDMETEsuOJ2tra999/f9CgQZ07d7amYjQaNQxD13VryonIP/7xj169evXu3duyiuFw2LIDJhH54IMPUlNT+/fvb1lFizfw448/rqysHDVqVNuv+uBBKSmRMWPqjI5EIla+REXkkksuaZcjGKB1XBPwLbB58+a5c+euXr26V69edvfSLo4ePZqXl/eLX/xi/PjxdvfSXiZMmPC///u/s2bNsruR9jJr1qyePXsuXLjQ7kbay89+9rM9e/Y899xzdjcCfO3wHjwAAAoi4AEAUJDKl+hra2tLS0tzcnKsfMfRSpFI5OjRo507d7byU28WO3z4cEZGRkZGht2NtJdjx47put6pUye7G2kvX3zxRSgU6tatm92NAF87Kgc8AABfW1yiBwBAQa68dr1nz54lS5ZUVFSMGzdu1qxZdb6W1uDUpo90ghZs4D//+c8VK1aUlZWdfvrpt912W9euXUVk3rx5hYWF5lJTpkyZPXu29dvSoBZsYIPboswzWFBQsHz58pPneeaZZ7Kyshz7DErTHvzNmzefffbZsTtDuGs3BFwv6jbhcPi6667buXOn3++/++6733777UanNn2kE7RgA4uLiy+//PL9+/f7/f5f//rXDz74oDnzNddcU1FREQwGg8FgOBy2fFMa1oINjDa0LSo9g5FIJPilbdu2PfTQQ+bMznwGo0178D///PPLL7+8uro6wSKOfRIBBbjvYHnnzp1dunQZNmyYz+ebOnXqhg0bGp3a9JFO0IIN/Oijj4YNG9avXz+fz3fxxRfv379fRGpra0UkIyPD6/V6vV6Lb/2RQAs2sMFtUekZ9Hg85qZ5PJ4VK1aYZ+qOfQalCQ/+Y489dscdd9TU1CRexLFPIqAA912iLykpid3XrHfv3seOHWt0atNHOkELNnDMmDHf/OY3zZGffPLJ6aefLiJHjx4Vkblz55aWlg4cOHDOnDkdO3a0bCsSaMEGNrgtKj2DMWvXrh06dKj5mXPHPoPShN1n/vz5IjJz5szEizj2SQQU4L4z+MrKytitZ1NTUysqKhqd2vSRTtCCDfT5fOadMt99990//vGPV111lYgEAoFBgwb99Kc//fOf/9yhQ4elS5dauhnxtWADG9wWlZ5BUzgcfvXVV6dNm2b+17HPoLTowXfXbggowH0Bn56ebl66FBG/31/nFtANTm36SCdowQaKSGVl5cMPP1xQUPDggw8OGDBARPr373/PPfd06tRJ1/W8vLwPPvjAwo1IpAUb2OC2KPYMish7773Xq1ev7Oxs87+OfQalRQ++u3ZDQAHuC/icnJyioiJz+PDhwzk5OY1ObfpIJ2jBBoZCofvvv79Hjx5PPPFEnz59zKmFhYWxD2AnJSVZ9ht3jWrBBja4LSo9g6a333775B9lcewzKC168N21GwIKcF/ADx8+/MiRIwcPHjQMY+3atbHfWSksLPT7/Q1ObfpIJ2jBBv7jH/9ITU2dNWvWyT+ReezYsUcffbSkpMQwjDVr1oyp96NbdmnBBja4LSo9gyISCAR27tx5csA79hmUxrax6Ys49kkEFODKO9nt27fvqaeeCgQCo0ePvu6668xUmz59+qJFiwYOHNjg1KaPdILmbuCyZctWr14dWzwzM/PZZ58VkZdeeumNN94IhUIjRoy46aabrPwV8MRa8Aw2uC3KPIMisnPnzt/+9rd13mh37DMojW2jOc/MmTPNDxAkWMSxTyLgdq4MeAAAkJj7LtEDAIBGEfAAACiIgAcAQEEEPAAACiLgAQBQEAEPAICCCHgoYvr06Vo9kydPtrsvALCH+35NDohn4sSJjzzyyMljsrKy7GoGAOxFwEMdnTt3zs3NTTxPTU3NyfeDq/PfJi4FAM7HJXp8LWiatmXLlkmTJl155ZX1/1taWnrttdd27969R48e11xzzfHjxxtcCgBchDN4qKOsrGzbtm0nj+nRo0f37t3N4TvvvHPOnDkTJkyo899oNDp58mRN01auXCki8+fPv/DCC7du3drgUgDgFgQ81LF+/fr/394do6oORGEAnhFL12AQK7EJ6AIEayvFxkXY2Wpv4zrcgK24ANt0EtBdKHgLQXxPuc3j8sjc76tyEg5M90PmwOn3+69vVqvVcrl8PI9Go9ls9vz0LPf7/fF4PJ1OzWYzhLDdbtvt9uFweGw2+6sLoCr8oicdk8nk/qdnuocQXjexvpZFUbRarUe6hxCyLMuyrCiKj10AVSHg+S0ajcbH8n2hYq1Wu91uH7sAqkLA89t1Op2yLC+Xy6M8n89lWXa73f97KoB/5A6edLwP2YUQer3e912DwSDP8+l0ul6v7/f7YrHI89xUHVB1Ap50vA/Z1ev16/X6fVeMcbfbzefz8XgcYxwOh5vNJsb4kycF+HHx/QISAKg6d/AAkCABDwAJEvAAkCABDwAJEvAAkCABDwAJEvAAkCABDwAJEvAAkCABDwAJ+gLK8q2I+sKOdQAAAABJRU5ErkJggg==" /><!-- --></p>
 <div id="appendix" class="section level2">
 <h2>Appendix</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 <div id="true-tree" class="section level3">
 <h3>True tree</h3>
 <p>See true tree again:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>ape<span class="op">::</span><span class="kw">plot.phylo</span>(phylogeny, <span class="dt">main =</span> <span class="st">&quot;The True Phylogeny&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>ape<span class="sc">::</span><span class="fu">plot.phylo</span>(phylogeny, <span class="at">main =</span> <span class="st">&quot;The True Phylogeny&quot;</span>)</span></code></pre></div>
 <p><img src="data:image/png;base64,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" /><!-- --></p>
 <p>See the alignment generated from the true tree:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a>) {</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(pir_params<span class="op">$</span>alignment_params<span class="op">$</span>fasta_filename)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>  ape<span class="op">::</span><span class="kw">image.DNAbin</span>(</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a>    ape<span class="op">::</span><span class="kw">read.FASTA</span>(<span class="dt">file =</span> pir_params<span class="op">$</span>alignment_params<span class="op">$</span>fasta_filename)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true"></a>  )</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true"></a>}</span></code></pre></div>
-<p>See the posterior trees generated from the true alignment, for the generative model:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a>) {</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a>  <span class="co"># BEAUti offers the &#39;$(tree)&#39; shorthand notation.</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true"></a>  <span class="co"># Here, do what BEAUti does...</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true"></a>  treelog_filename &lt;-</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true"></a><span class="st">    </span>pir_params<span class="op">$</span>experiments[[<span class="dv">1</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>treelog<span class="op">$</span>filename</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true"></a></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true"></a>  treelog_filename &lt;-<span class="st"> </span><span class="kw">gsub</span>(</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true"></a>    <span class="dt">x =</span> treelog_filename,</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true"></a>    <span class="dt">pattern =</span> <span class="st">&quot;</span><span class="ch">\\</span><span class="st">$</span><span class="ch">\\</span><span class="st">(tree</span><span class="ch">\\</span><span class="st">)&quot;</span>,</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true"></a>    <span class="dt">replacement =</span> beautier<span class="op">::</span><span class="kw">get_alignment_id</span>(</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true"></a>      pir_params<span class="op">$</span>alignment_params<span class="op">$</span>fasta_filename</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true"></a>    )</span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true"></a>  )</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(treelog_filename)</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true"></a>  babette<span class="op">::</span><span class="kw">plot_densitree</span>(tracerer<span class="op">::</span><span class="kw">parse_beast_trees</span>(treelog_filename))</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>) {</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(pir_params<span class="sc">$</span>alignment_params<span class="sc">$</span>fasta_filename)</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>  ape<span class="sc">::</span><span class="fu">image.DNAbin</span>(</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    ape<span class="sc">::</span><span class="fu">read.FASTA</span>(<span class="at">file =</span> pir_params<span class="sc">$</span>alignment_params<span class="sc">$</span>fasta_filename)</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>  )</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>}</span></code></pre></div>
+<p>See the posterior trees generated from the true alignment, for the
+generative model:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>) {</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>  <span class="co"># BEAUti offers the &#39;$(tree)&#39; shorthand notation.</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>  <span class="co"># Here, do what BEAUti does...</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>  treelog_filename <span class="ot">&lt;-</span></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>    pir_params<span class="sc">$</span>experiments[[<span class="dv">1</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>treelog<span class="sc">$</span>filename</span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>  treelog_filename <span class="ot">&lt;-</span> <span class="fu">gsub</span>(</span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>    <span class="at">x =</span> treelog_filename,</span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">$</span><span class="sc">\\</span><span class="st">(tree</span><span class="sc">\\</span><span class="st">)&quot;</span>,</span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a>    <span class="at">replacement =</span> beautier<span class="sc">::</span><span class="fu">get_alignment_id</span>(</span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a>      pir_params<span class="sc">$</span>alignment_params<span class="sc">$</span>fasta_filename</span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a>    )</span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a>  )</span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(treelog_filename)</span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>  babette<span class="sc">::</span><span class="fu">plot_densitree</span>(tracerer<span class="sc">::</span><span class="fu">parse_beast_trees</span>(treelog_filename))</span>
+<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a>}</span></code></pre></div>
 <p>See the evidence of the true alignments for the models:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true"></a>) {</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true"></a>  knitr<span class="op">::</span><span class="kw">kable</span>(readr<span class="op">::</span><span class="kw">read_csv</span>(pir_params<span class="op">$</span>evidence_filename))</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true"></a>}</span></code></pre></div>
-<p>See the posterior trees generated from the true alignment, for the model with the most evidence:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a>) {</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a>  experiment &lt;-<span class="st"> </span>pir_params<span class="op">$</span>experiments[[<span class="dv">2</span>]]</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a>  trees_filename &lt;-<span class="st"> </span>experiment<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>treelog<span class="op">$</span>filename</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(trees_filename)</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true"></a>  babette<span class="op">::</span><span class="kw">plot_densitree</span>(tracerer<span class="op">::</span><span class="kw">parse_beast_trees</span>(trees_filename))</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true"></a>}</span></code></pre></div>
-<p>See the posterior parameter estimates generated from the true alignment, for the generative model:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a>) {</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a>    <span class="co"># A tracelog&#39;s filename is set to NA by default.</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a>    <span class="co"># Here, do what BEAUti does...</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a>    tracelog_filename &lt;-</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a><span class="st">      </span>pir_params<span class="op">$</span>experiments[[<span class="dv">1</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>tracelog<span class="op">$</span>filename</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a>    <span class="cf">if</span> (<span class="kw">is.na</span>(tracelog_filename)) {</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true"></a>      pir_params<span class="op">$</span>experiments[[<span class="dv">1</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>tracelog<span class="op">$</span>filename &lt;-</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true"></a><span class="st">      </span><span class="kw">paste0</span>(</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true"></a>        beautier<span class="op">::</span><span class="kw">get_alignment_id</span>(pir_params<span class="op">$</span>alignment_params<span class="op">$</span>fasta_filename),</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true"></a>        <span class="st">&quot;.log&quot;</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true"></a>      )</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true"></a>    }</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true"></a></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true"></a>    pir_params<span class="op">$</span>experiments[[<span class="dv">1</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>tracelog<span class="op">$</span>filename</span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true"></a>  )</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true"></a>  df &lt;-<span class="st"> </span>tracerer<span class="op">::</span><span class="kw">parse_beast_tracelog_file</span>(</span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true"></a>    pir_params<span class="op">$</span>experiments[[<span class="dv">1</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>tracelog<span class="op">$</span>filename</span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true"></a>  )</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> df, <span class="kw">aes</span>(<span class="dt">x =</span> Sample, <span class="dt">y =</span> likelihood)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true"></a>}</span></code></pre></div>
-<p>See the posterior parameter estimates generated from the true alignment, for the model with the most evidence:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true"></a>) {</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true"></a>  experiment &lt;-<span class="st"> </span>pir_params<span class="op">$</span>experiments[[<span class="dv">2</span>]]</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true"></a>  log_filename &lt;-<span class="st"> </span>experiment<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>tracelog<span class="op">$</span>filename</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(log_filename)</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true"></a>  df &lt;-<span class="st"> </span>tracerer<span class="op">::</span><span class="kw">parse_beast_tracelog_file</span>(log_filename)</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> df, <span class="kw">aes</span>(<span class="dt">x =</span> Sample, <span class="dt">y =</span> likelihood)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>) {</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(readr<span class="sc">::</span><span class="fu">read_csv</span>(pir_params<span class="sc">$</span>evidence_filename))</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>}</span></code></pre></div>
+<p>See the posterior trees generated from the true alignment, for the
+model with the most evidence:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>) {</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>  experiment <span class="ot">&lt;-</span> pir_params<span class="sc">$</span>experiments[[<span class="dv">2</span>]]</span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a>  trees_filename <span class="ot">&lt;-</span> experiment<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>treelog<span class="sc">$</span>filename</span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(trees_filename)</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a>  babette<span class="sc">::</span><span class="fu">plot_densitree</span>(tracerer<span class="sc">::</span><span class="fu">parse_beast_trees</span>(trees_filename))</span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a>}</span></code></pre></div>
+<p>See the posterior parameter estimates generated from the true
+alignment, for the generative model:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>) {</span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>    <span class="co"># A tracelog&#39;s filename is set to NA by default.</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a>    <span class="co"># Here, do what BEAUti does...</span></span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>    tracelog_filename <span class="ot">&lt;-</span></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a>      pir_params<span class="sc">$</span>experiments[[<span class="dv">1</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>tracelog<span class="sc">$</span>filename</span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">is.na</span>(tracelog_filename)) {</span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a>      pir_params<span class="sc">$</span>experiments[[<span class="dv">1</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>tracelog<span class="sc">$</span>filename <span class="ot">&lt;-</span></span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a>      <span class="fu">paste0</span>(</span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a>        beautier<span class="sc">::</span><span class="fu">get_alignment_id</span>(pir_params<span class="sc">$</span>alignment_params<span class="sc">$</span>fasta_filename),</span>
+<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a>        <span class="st">&quot;.log&quot;</span></span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a>      )</span>
+<span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a>    }</span>
+<span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(</span>
+<span id="cb15-18"><a href="#cb15-18" tabindex="-1"></a>    pir_params<span class="sc">$</span>experiments[[<span class="dv">1</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>tracelog<span class="sc">$</span>filename</span>
+<span id="cb15-19"><a href="#cb15-19" tabindex="-1"></a>  )</span>
+<span id="cb15-20"><a href="#cb15-20" tabindex="-1"></a>  df <span class="ot">&lt;-</span> tracerer<span class="sc">::</span><span class="fu">parse_beast_tracelog_file</span>(</span>
+<span id="cb15-21"><a href="#cb15-21" tabindex="-1"></a>    pir_params<span class="sc">$</span>experiments[[<span class="dv">1</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>tracelog<span class="sc">$</span>filename</span>
+<span id="cb15-22"><a href="#cb15-22" tabindex="-1"></a>  )</span>
+<span id="cb15-23"><a href="#cb15-23" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> Sample, <span class="at">y =</span> likelihood)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
+<span id="cb15-24"><a href="#cb15-24" tabindex="-1"></a>}</span></code></pre></div>
+<p>See the posterior parameter estimates generated from the true
+alignment, for the model with the most evidence:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>) {</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>  experiment <span class="ot">&lt;-</span> pir_params<span class="sc">$</span>experiments[[<span class="dv">2</span>]]</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>  log_filename <span class="ot">&lt;-</span> experiment<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>tracelog<span class="sc">$</span>filename</span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(log_filename)</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>  df <span class="ot">&lt;-</span> tracerer<span class="sc">::</span><span class="fu">parse_beast_tracelog_file</span>(log_filename)</span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> Sample, <span class="at">y =</span> likelihood)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="twin-tree" class="section level3">
 <h3>Twin tree</h3>
 <p>See the twin tree:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true"></a>) {</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true"></a>  ape<span class="op">::</span><span class="kw">plot.phylo</span>(</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true"></a>    ape<span class="op">::</span><span class="kw">read.tree</span>(pir_params<span class="op">$</span>twinning_params<span class="op">$</span>twin_tree_filename),</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true"></a>    <span class="dt">main =</span> <span class="st">&quot;The Twin Tree&quot;</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true"></a>  )</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>) {</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a>  ape<span class="sc">::</span><span class="fu">plot.phylo</span>(</span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a>    ape<span class="sc">::</span><span class="fu">read.tree</span>(pir_params<span class="sc">$</span>twinning_params<span class="sc">$</span>twin_tree_filename),</span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a>    <span class="at">main =</span> <span class="st">&quot;The Twin Tree&quot;</span></span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a>  )</span>
+<span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a>}</span></code></pre></div>
 <p>See the alignment generated from the twin tree:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true"></a>) {</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(pir_params<span class="op">$</span>twinning_params<span class="op">$</span>twin_alignment_filename)</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true"></a>  ape<span class="op">::</span><span class="kw">image.DNAbin</span>(</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true"></a>    ape<span class="op">::</span><span class="kw">read.FASTA</span>(<span class="dt">file =</span> pir_params<span class="op">$</span>twinning_params<span class="op">$</span>twin_alignment_filename)</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true"></a>  )</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true"></a>}</span></code></pre></div>
-<p>See the posterior trees generated from the twin alignment, for the generative model:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true"></a>) {</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true"></a>  trees_filename &lt;-<span class="st"> </span><span class="kw">to_twin_filename</span>(</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true"></a>    pir_params<span class="op">$</span>experiments[[<span class="dv">1</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>treelog<span class="op">$</span>filename</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true"></a>  )</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(trees_filename)</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true"></a>  babette<span class="op">::</span><span class="kw">plot_densitree</span>(</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true"></a>    tracerer<span class="op">::</span><span class="kw">parse_beast_trees</span>(trees_filename)</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true"></a>  )</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a>) {</span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(pir_params<span class="sc">$</span>twinning_params<span class="sc">$</span>twin_alignment_filename)</span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a>  ape<span class="sc">::</span><span class="fu">image.DNAbin</span>(</span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a>    ape<span class="sc">::</span><span class="fu">read.FASTA</span>(<span class="at">file =</span> pir_params<span class="sc">$</span>twinning_params<span class="sc">$</span>twin_alignment_filename)</span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a>  )</span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a>}</span></code></pre></div>
+<p>See the posterior trees generated from the twin alignment, for the
+generative model:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a>) {</span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a>  trees_filename <span class="ot">&lt;-</span> <span class="fu">to_twin_filename</span>(</span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a>    pir_params<span class="sc">$</span>experiments[[<span class="dv">1</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>treelog<span class="sc">$</span>filename</span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a>  )</span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(trees_filename)</span>
+<span id="cb19-9"><a href="#cb19-9" tabindex="-1"></a>  babette<span class="sc">::</span><span class="fu">plot_densitree</span>(</span>
+<span id="cb19-10"><a href="#cb19-10" tabindex="-1"></a>    tracerer<span class="sc">::</span><span class="fu">parse_beast_trees</span>(trees_filename)</span>
+<span id="cb19-11"><a href="#cb19-11" tabindex="-1"></a>  )</span>
+<span id="cb19-12"><a href="#cb19-12" tabindex="-1"></a>}</span></code></pre></div>
 <p>See the evidence of the true alignments for the models:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a>) {</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true"></a>  twin_evidence_filename &lt;-<span class="st"> </span>pir_params<span class="op">$</span>twinning_params<span class="op">$</span>twin_evidence_filename</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(twin_evidence_filename)</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true"></a>  knitr<span class="op">::</span><span class="kw">kable</span>(readr<span class="op">::</span><span class="kw">read_csv</span>(twin_evidence_filename))</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true"></a>}</span></code></pre></div>
-<p>See the posterior trees generated from the twin alignment, for the model with the most evidence:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true"></a>) {</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true"></a>  trees_filename &lt;-<span class="st"> </span><span class="kw">to_twin_filename</span>(</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true"></a>    pir_params<span class="op">$</span>experiments[[<span class="dv">2</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>treelog<span class="op">$</span>filename</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true"></a>  )</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(trees_filename)</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true"></a>  babette<span class="op">::</span><span class="kw">plot_densitree</span>(tracerer<span class="op">::</span><span class="kw">parse_beast_trees</span>(trees_filename))</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true"></a>}</span></code></pre></div>
-<p>See the posterior parameter estimates generated from the true alignment, for the generative model:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span><span class="st"> </span><span class="kw">is_beast2_ns_pkg_installed</span>()) {</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a>  log_filename &lt;-<span class="st"> </span><span class="kw">to_twin_filename</span>(</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true"></a>    pir_params<span class="op">$</span>experiments[[<span class="dv">2</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>tracelog<span class="op">$</span>filename</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true"></a>    )</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(log_filename)</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true"></a>  df &lt;-<span class="st"> </span>tracerer<span class="op">::</span><span class="kw">parse_beast_tracelog_file</span>(log_filename)</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> df, <span class="kw">aes</span>(<span class="dt">x =</span> Sample, <span class="dt">y =</span> likelihood)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true"></a>}</span></code></pre></div>
-<p>See the posterior parameter estimates generated from the true alignment, for the model with the most evidence:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="cf">if</span> (rappdirs<span class="op">::</span><span class="kw">app_dir</span>()<span class="op">$</span>os <span class="op">!=</span><span class="st"> &quot;win&quot;</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_installed</span>() <span class="op">&amp;&amp;</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">is_beast2_ns_pkg_installed</span>()</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true"></a>) {</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true"></a>  log_filename &lt;-<span class="st"> </span><span class="kw">to_twin_filename</span>(</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true"></a>    pir_params<span class="op">$</span>experiments[[<span class="dv">2</span>]]<span class="op">$</span>inference_model<span class="op">$</span>mcmc<span class="op">$</span>tracelog<span class="op">$</span>filename</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true"></a>  )</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true"></a>  <span class="kw">check_file_exists</span>(log_filename)</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true"></a>  df &lt;-<span class="st"> </span>tracerer<span class="op">::</span><span class="kw">parse_beast_tracelog_file</span>(log_filename)</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true"></a>  <span class="kw">ggplot</span>(<span class="dt">data =</span> df, <span class="kw">aes</span>(<span class="dt">x =</span> Sample, <span class="dt">y =</span> likelihood)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a>) {</span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a>  twin_evidence_filename <span class="ot">&lt;-</span> pir_params<span class="sc">$</span>twinning_params<span class="sc">$</span>twin_evidence_filename</span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(twin_evidence_filename)</span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(readr<span class="sc">::</span><span class="fu">read_csv</span>(twin_evidence_filename))</span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a>}</span></code></pre></div>
+<p>See the posterior trees generated from the twin alignment, for the
+model with the most evidence:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>) {</span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a>  trees_filename <span class="ot">&lt;-</span> <span class="fu">to_twin_filename</span>(</span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a>    pir_params<span class="sc">$</span>experiments[[<span class="dv">2</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>treelog<span class="sc">$</span>filename</span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a>  )</span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(trees_filename)</span>
+<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a>  babette<span class="sc">::</span><span class="fu">plot_densitree</span>(tracerer<span class="sc">::</span><span class="fu">parse_beast_trees</span>(trees_filename))</span>
+<span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a>}</span></code></pre></div>
+<p>See the posterior parameter estimates generated from the true
+alignment, for the generative model:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a>) {</span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a>  log_filename <span class="ot">&lt;-</span> <span class="fu">to_twin_filename</span>(</span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1"></a>    pir_params<span class="sc">$</span>experiments[[<span class="dv">2</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>tracelog<span class="sc">$</span>filename</span>
+<span id="cb22-7"><a href="#cb22-7" tabindex="-1"></a>    )</span>
+<span id="cb22-8"><a href="#cb22-8" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(log_filename)</span>
+<span id="cb22-9"><a href="#cb22-9" tabindex="-1"></a>  df <span class="ot">&lt;-</span> tracerer<span class="sc">::</span><span class="fu">parse_beast_tracelog_file</span>(log_filename)</span>
+<span id="cb22-10"><a href="#cb22-10" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> Sample, <span class="at">y =</span> likelihood)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
+<span id="cb22-11"><a href="#cb22-11" tabindex="-1"></a>}</span></code></pre></div>
+<p>See the posterior parameter estimates generated from the true
+alignment, for the model with the most evidence:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="cf">if</span> (rappdirs<span class="sc">::</span><span class="fu">app_dir</span>()<span class="sc">$</span>os <span class="sc">!=</span> <span class="st">&quot;win&quot;</span> <span class="sc">&amp;&amp;</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>    beastier<span class="sc">::</span><span class="fu">is_beast2_installed</span>() <span class="sc">&amp;&amp;</span></span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>    mauricer<span class="sc">::</span><span class="fu">is_beast2_ns_pkg_installed</span>()</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a>) {</span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a>  log_filename <span class="ot">&lt;-</span> <span class="fu">to_twin_filename</span>(</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a>    pir_params<span class="sc">$</span>experiments[[<span class="dv">2</span>]]<span class="sc">$</span>inference_model<span class="sc">$</span>mcmc<span class="sc">$</span>tracelog<span class="sc">$</span>filename</span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a>  )</span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a>  <span class="fu">check_file_exists</span>(log_filename)</span>
+<span id="cb23-9"><a href="#cb23-9" tabindex="-1"></a>  df <span class="ot">&lt;-</span> tracerer<span class="sc">::</span><span class="fu">parse_beast_tracelog_file</span>(log_filename)</span>
+<span id="cb23-10"><a href="#cb23-10" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> Sample, <span class="at">y =</span> likelihood)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
+<span id="cb23-11"><a href="#cb23-11" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 </div>
 

@@ -50,13 +50,13 @@ pir_plot(errors)
 ## -----------------------------------------------------------------------------
 if (rappdirs::app_dir()$os != "win") {
   experiment_yule <- create_test_cand_experiment(
-    inference_model = create_test_inference_model(
-      tree_prior = create_yule_tree_prior()
+    inference_model = beautier::create_test_inference_model(
+      tree_prior = beautier::create_yule_tree_prior()
     )
   )
   experiment_bd <- create_test_cand_experiment(
-    inference_model = create_test_inference_model(
-      tree_prior = create_bd_tree_prior()
+    inference_model = beautier::create_test_inference_model(
+      tree_prior = beautier::create_bd_tree_prior()
     )
   )
   # Use the same files to work on, as only one will actually run an experiment
@@ -76,8 +76,8 @@ if (rappdirs::app_dir()$os != "win") {
 
 ## -----------------------------------------------------------------------------
 if (rappdirs::app_dir()$os != "win" &&
-    is_beast2_installed() &&
-    is_beast2_ns_pkg_installed()
+    beastier::is_beast2_installed() &&
+    mauricer::is_beast2_ns_pkg_installed()
 ) {
   errors <- pir_run(
     phylogeny = true_phylogeny,
@@ -95,14 +95,14 @@ pir_plot(errors)
 
 ## -----------------------------------------------------------------------------
 experiment_yule <- create_test_gen_experiment(
-  inference_model = create_test_inference_model(
-    tree_prior = create_yule_tree_prior()
+  inference_model = beautier::create_test_inference_model(
+    tree_prior = beautier::create_yule_tree_prior()
   )
 )
 if (rappdirs::app_dir()$os != "win") {
   experiment_bd <- create_test_cand_experiment(
-    inference_model = create_test_inference_model(
-      tree_prior = create_bd_tree_prior()
+    inference_model = beautier::create_test_inference_model(
+      tree_prior = beautier::create_bd_tree_prior()
     )
   )
   experiments <- list(experiment_yule, experiment_bd)
@@ -125,8 +125,8 @@ if (rappdirs::app_dir()$os != "win") {
 
 ## -----------------------------------------------------------------------------
 if (rappdirs::app_dir()$os != "win" &&
-    is_beast2_installed() &&
-    is_beast2_ns_pkg_installed()
+    beastier::is_beast2_installed() &&
+    mauricer::is_beast2_ns_pkg_installed()
 ) {
   errors <- pir_run(
     phylogeny = true_phylogeny,
