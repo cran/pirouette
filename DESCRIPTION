@@ -1,7 +1,7 @@
 Package: pirouette
 Type: Package
 Title: Create a Bayesian Posterior from a Phylogeny
-Version: 1.6.8
+Version: 1.6.9
 Authors@R: c(
   person("Richèl J.C.", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")),
   person("Giovanni", "Laudanno", email = "glaudanno@gmail.com",   role = "aut"),
@@ -30,10 +30,10 @@ Suggests: devtools, dplyr, ggplot2, knitr, lintr, markdown, nLTT (>=
         1.4.3), rappdirs, rmarkdown, Rmpfr, testthat (>= 2.1.0)
 SystemRequirements: BEAST2 (https://www.beast2.org/)
 NeedsCompilation: no
-Packaged: 2023-09-29 12:32:21 UTC; richel
+Packaged: 2023-10-07 06:31:04 UTC; richel
 Author: Richèl J.C. Bilderbeek [aut, cre]
     (<https://orcid.org/0000-0003-1107-7049>),
   Giovanni Laudanno [aut],
   Thijs Janzen [ctb]
 Repository: CRAN
-Date/Publication: 2023-09-29 13:42:43 UTC
+Date/Publication: 2023-10-07 07:20:02 UTC

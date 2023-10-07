@@ -5,7 +5,14 @@
 #' @return nothing. Will \link{stop} if not
 #' @author Richèl J.C. Bilderbeek
 #' @examples
+#' # Check cleanup by other functions
+#' beastier::check_empty_beaustier_folders()
+#'
 #' check_alignment_params(create_test_alignment_params())
+#'
+#' # Cleanup
+#' beastier::remove_beaustier_folders()
+#' beastier::check_empty_beaustier_folders()
 #' @export
 check_alignment_params <- function(
   alignment_params
